@@ -1,0 +1,330 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Terminal from '../components/Terminal.astro';
+---
+
+<Layout>
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-ctp-surface0 bg-ctp-base/80 backdrop-blur-md">
+    <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="/" class="font-mono text-ctp-mauve text-sm hover:text-ctp-lavender transition-colors">
+        ~/loren
+      </a>
+      <div class="flex items-center gap-6 text-sm text-ctp-subtext0">
+        <a href="#about"    class="hover:text-ctp-text transition-colors">about</a>
+        <a href="#experience" class="hover:text-ctp-text transition-colors">experience</a>
+        <a href="https://github.com/lorenwright" class="hover:text-ctp-text transition-colors">github</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section class="relative min-h-screen flex items-center pt-14">
+      <!-- Ambient glows -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-ctp-mauve/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 left-[20%] w-80 h-80 bg-ctp-blue/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto px-6 py-20 w-full grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-16 items-center">
+
+        <!-- Text -->
+        <div>
+          <p class="font-mono text-ctp-mauve text-sm mb-4">hi, i'm</p>
+          <h1 class="text-5xl lg:text-6xl font-bold mb-5 leading-tight tracking-tight text-gradient">
+            Loren Wright
+          </h1>
+          <p class="text-lg text-ctp-subtext1 mb-8 leading-relaxed max-w-md">
+            Software engineer building for the web.
+            I like clean abstractions, interesting problems,
+            and currently deep in agentic AI workflows.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#experience"
+               class="px-5 py-2.5 bg-ctp-mauve text-ctp-base font-medium rounded-lg hover:bg-ctp-lavender transition-colors text-sm">
+              experience
+            </a>
+            <a href="https://github.com/lorenwright"
+               class="px-5 py-2.5 border border-ctp-surface1 text-ctp-subtext1 rounded-lg hover:border-ctp-surface2 hover:text-ctp-text transition-colors text-sm">
+              github
+            </a>
+            <a href="mailto:lorenwright.dev@gmail.com"
+               class="px-5 py-2.5 border border-ctp-surface1 text-ctp-subtext1 rounded-lg hover:border-ctp-surface2 hover:text-ctp-text transition-colors text-sm">
+              email
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal -->
+        <Terminal />
+      </div>
+    </section>
+
+    <!-- ── About ── -->
+    <section id="about" class="py-24 border-t border-ctp-surface0">
+      <div class="max-w-5xl mx-auto px-6">
+        <p class="font-mono text-ctp-mauve text-sm mb-10">~/about</p>
+        <div class="flex flex-col lg:flex-row gap-10 max-w-3xl items-start">
+          <img
+            src="/loren.png"
+            alt="Loren Wright"
+            class="w-32 h-32 rounded-full flex-shrink-0 ring-2 ring-ctp-mauve ring-offset-4 ring-offset-ctp-base"
+          />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 flex-1">
+          <div class="space-y-4 text-ctp-subtext1 leading-relaxed">
+            <p>
+              Senior software engineer with over a decade of experience building for the web —
+              from pixel-perfect frontends to HIPAA-compliant healthcare platforms.
+              Currently a founding engineer at <span class="text-ctp-text">Develo</span>,
+              where I'm building a pediatric EMR from the ground up.
+            </p>
+            <p>
+              I care about clean systems, fast feedback loops, and writing code
+              that the next engineer will actually thank you for.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-ctp-subtext0 text-sm font-mono mb-5">currently interested in</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-ctp-subtext1">
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #cba6f7"></span>
+                agentic AI &amp; LLM workflows
+              </li>
+              <li class="flex items-center gap-3 text-sm text-ctp-subtext1">
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #89b4fa"></span>
+                system design &amp; architecture
+              </li>
+              <li class="flex items-center gap-3 text-sm text-ctp-subtext1">
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #94e2d5"></span>
+                developer experience
+              </li>
+              <li class="flex items-center gap-3 text-sm text-ctp-subtext1">
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: #fab387"></span>
+                engineering leadership
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ── -->
+    <section id="experience" class="py-24 border-t border-ctp-surface0">
+      <div class="max-w-5xl mx-auto px-6">
+        <p class="font-mono text-ctp-mauve text-sm mb-10">~/experience</p>
+
+        <div class="max-w-2xl">
+          <!-- Timeline -->
+          <div class="relative pl-6 border-l border-ctp-surface1 space-y-10">
+
+            <!-- Entry 1 -->
+            <div class="relative">
+              <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-ctp-mauve ring-4 ring-ctp-base"></div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                <div>
+                  <span class="text-ctp-text font-medium">Founding Engineer</span>
+                  <span class="text-ctp-subtext0 mx-2">·</span>
+                  <span class="text-ctp-blue">Develo</span>
+                </div>
+                <span class="font-mono text-ctp-overlay1 text-xs flex-shrink-0">2023 – present</span>
+              </div>
+              <p class="text-ctp-subtext1 text-sm leading-relaxed mb-3">
+                Helped build Develo's pediatric EMR platform from the ground up, scaling from 0 to
+                thousands of active users. Work spans full-stack development, system architecture,
+                and product — with a focus on TypeScript, React, Node, Postgres, and agentic workflows.
+              </p>
+              <ul class="space-y-1.5">
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Built a secure, scalable EMR platform tailored for pediatric practices
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Developed a full financial system — credit cards, automatic billing, payment plans, and saved payment methods
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Implemented backend systems supporting high concurrency and real-time data access
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Collaborated closely with product and design to iterate on features based on user feedback
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">typescript</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">react</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">node.js</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">postgres</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">prisma</span>
+              </div>
+            </div>
+
+            <!-- Entry 2 -->
+            <div class="relative">
+              <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-ctp-surface2 ring-4 ring-ctp-base"></div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                <div>
+                  <span class="text-ctp-text font-medium">Director of Engineering</span>
+                  <span class="text-ctp-subtext0 mx-2">·</span>
+                  <span class="text-ctp-blue">Panda Game Manufacturing</span>
+                </div>
+                <span class="font-mono text-ctp-overlay1 text-xs flex-shrink-0">2018 – 2023</span>
+              </div>
+              <p class="text-ctp-subtext1 text-sm leading-relaxed mb-3">
+                Led a diverse engineering team building internal and customer-facing tools within a
+                custom project management application. Partnered with executives to define product
+                roadmaps and prioritize features for 10,000+ users.
+              </p>
+              <ul class="space-y-1.5">
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Managed the engineering team and mentored developers
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Delivered new features based on user feedback and business priorities
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Maintained high code quality through systematic reviews and documentation
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">javascript</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">vue</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">php</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">laravel</span>
+              </div>
+            </div>
+
+            <!-- Entry 3 -->
+            <div class="relative">
+              <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-ctp-surface2 ring-4 ring-ctp-base"></div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                <div>
+                  <span class="text-ctp-text font-medium">Senior Software Engineer</span>
+                  <span class="text-ctp-subtext0 mx-2">·</span>
+                  <span class="text-ctp-blue">Last Call Trivia</span>
+                </div>
+                <span class="font-mono text-ctp-overlay1 text-xs flex-shrink-0">2021 – 2023</span>
+              </div>
+              <ul class="space-y-1.5">
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Collaborated with a team of engineers to develop a real-time bar trivia web &amp; mobile application
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Utilized GraphQL subscriptions to provide real-time feedback to users
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Gathered requirements for building new features
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">graphql</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">react</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">react native</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">php</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">symfony</span>
+              </div>
+            </div>
+
+            <!-- Entry 4 -->
+            <div class="relative">
+              <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-ctp-surface2 ring-4 ring-ctp-base"></div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                <div>
+                  <span class="text-ctp-text font-medium">Front End Developer</span>
+                  <span class="text-ctp-subtext0 mx-2">·</span>
+                  <span class="text-ctp-blue">fjorge</span>
+                </div>
+                <span class="font-mono text-ctp-overlay1 text-xs flex-shrink-0">2016 – 2018</span>
+              </div>
+              <ul class="space-y-1.5">
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Created unique user experiences using modern technologies
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Worked with design agencies to develop pixel-perfect websites and applications
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Created and documented core development processes used company-wide
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Implemented Agile methodologies for a team of 18+ developers
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">javascript</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">react</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">wordpress</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">sass</span>
+              </div>
+            </div>
+
+            <!-- Entry 5 -->
+            <div class="relative">
+              <div class="absolute -left-[25px] top-1 w-3 h-3 rounded-full bg-ctp-surface2 ring-4 ring-ctp-base"></div>
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                <div>
+                  <span class="text-ctp-text font-medium">Front End Developer</span>
+                  <span class="text-ctp-subtext0 mx-2">·</span>
+                  <span class="text-ctp-blue">405 Media Group</span>
+                </div>
+                <span class="font-mono text-ctp-overlay1 text-xs flex-shrink-0">2014 – 2016</span>
+              </div>
+              <ul class="space-y-1.5">
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Personally designed 100+ websites tailored to client needs
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Built custom WordPress themes using well-documented code
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Created marketing material for small businesses — logos, brochures, proposals, and identity packages
+                </li>
+                <li class="flex gap-2 text-sm text-ctp-subtext0">
+                  <span class="text-ctp-mauve mt-0.5 flex-shrink-0">▸</span>
+                  Implemented on-page and off-page SEO and SEM tactics
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">wordpress</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">php</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">css</span>
+                <span class="px-2 py-0.5 rounded text-xs bg-ctp-surface0 text-ctp-overlay2 font-mono">seo/sem</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-ctp-surface0">
+    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between text-sm text-ctp-subtext0">
+      <span class="font-mono">~/loren</span>
+      <div class="flex gap-6">
+        <a href="https://github.com/lorenwright" class="hover:text-ctp-text transition-colors">github</a>
+        <a href="mailto:lorenwright.dev@gmail.com"      class="hover:text-ctp-text transition-colors">email</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
